@@ -25,7 +25,7 @@ The **Data Analysis for Issued Building Permits** project leverages AWS and adva
 - Automated workflow processes and set replication rules for efficient data management.
 - Performed data querying using Amazon Athena and visualized insights using Excel.
 
-[Link to Project 1](./Project1/README.md)
+[Link to Project 1](./City of Vancouver DAP/README.md)
 
 ---
 
@@ -50,6 +50,6 @@ The **HR Policy of Conflict Resolution** project focuses on analyzing conflict r
 - Ensured data security with KMS encryption and S3 bucket policies.
 - Developed interactive dashboards in Excel to visualize conflict resolution trends.
 
-[Link to Project 2](./Project2/README.md)
+[Link to Project 2](./UCW HR Policy Project/README.md)
 
 
