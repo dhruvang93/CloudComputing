@@ -1,4 +1,4 @@
-# Data Analysis for Issued Building Permits in DAP (City of Vancouver - Dhruvang)
+# Issued Building Permits DAP (City of Vancouver - Dhruvang)
 
 ## Overview
 
