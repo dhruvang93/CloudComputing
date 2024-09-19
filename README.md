@@ -4,11 +4,11 @@ This repository contains two key projects focused on data analysis and ETL proce
 
 ---
 
-## Project 1: DAP for Issued Building Permits in DAP (City of Vancouver)
+## Project 1: DAP for Issued Building Permits (City of Vancouver)
 
 ### Description
 
-The **Data Analysis for Issued Building Permits** project leverages AWS and advanced data analytics tools to analyze and visualize building permit data from the City of Vancouver for the years 2023 and 2024. The objective is to identify trends, implications, and actionable insights that can inform decision-making for stakeholders. By exploring the dynamics of building permits across different property types, neighborhoods, and activity levels, the analysis aims to provide data-driven recommendations to support future urban planning and development initiatives.
+The **DAP for Issued Building Permits** project leverages AWS and advanced data analytics tools to analyze and visualize building permit data from the City of Vancouver for the years 2023 and 2024. The objective is to identify trends, implications, and actionable insights that can inform decision-making for stakeholders. By exploring the dynamics of building permits across different property types, neighborhoods, and activity levels, the analysis aims to provide data-driven recommendations to support future urban planning and development initiatives.
 
 ### Key Features:
 
