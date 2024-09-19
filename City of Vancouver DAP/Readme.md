@@ -6,8 +6,28 @@ This project leverages AWS and advanced data analytics tools to analyze and visu
 
 ## Table of Contents
 
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Methodology](#methodology)
+   - Year-over-Year Trends
+   - Permit Activity Analysis
+3. [AWS-Based Storage Solution](#aws-based-storage-solution)
+4. [Data Preparation](#data-preparation)
+5. [Designing a Data Pipeline](#designing-a-data-pipeline)
+6. [Implementing the Data Pipeline](#implementing-the-data-pipeline)
+7. [Data Preparation and Query Execution](#data-preparation-and-query-execution)
+8. [Data Visualization](#data-visualization)
+9. [Data Publishing](#data-publishing)
+10. [Data Protection](#data-protection)
+11. [Data Governance](#data-governance)
+12. [Data Monitoring](#data-monitoring)
+13. [Tools Used](#tools-used)
+14. [Outcomes](#outcomes)
+
 -
-## Step 1: Formulate Focused Data Analytical Questions
+## Methodology
 
 To guide this analysis, we formulated specific questions related to the 2023 and 2024 building permit datasets:
 
@@ -18,7 +38,6 @@ To guide this analysis, we formulated specific questions related to the 2023 and
 
 ---
 
-## Step 2: Data Discovery for Issued Building Permits
 
 In the analysis of issued building permits within the City of Vancouver, datasets for 2023 and 2024 were sourced from the City of Vancouver Open Data Portal in Excel format. The initial phase involved a thorough examination of the dataset structure to familiarize with key fields such as `PermitNumber`, `IssueDate`, `PermitElapsedDays`, `ProjectValue`, `TypeOfWork`, `Address`, `PermitCategory`, `Applicant`, `PropertyUse`, `SpecificUseCategory`, and `GeoLocalArea`. Following this, detailed data profiling was conducted to identify patterns, detect anomalies, and generate descriptive statistics, which provided a comprehensive summary of the building permits data. This profiling was essential for understanding the distribution of project values, types of work, and the timelines for permit issuance.
 
@@ -28,17 +47,16 @@ Additionally, the datasets were scrutinized for any missing or incomplete data, 
 
 ---
 
-## Step 3: AWS-Based Storage Solution for Issued Building Permits Data
+##  AWS-Based Storage Solution for Issued Building Permits Data
 
 To effectively manage the building permits datasets for 2023 and 2024, a robust storage solution was designed using AWS. The Excel files containing the permit data were securely stored in Amazon S3, providing scalable and reliable storage. The datasets were meticulously organized into distinct S3 buckets, separated by the years 2023 and 2024, within dedicated landing zones to streamline access and management.
 
 In addition to storage and organization, stringent security measures were implemented, including access controls and encryption, to safeguard sensitive information. To facilitate accessibility for analysis, AWS Glue and Amazon Athena were employed, enabling the data to be structured, secure, and readily available for processing and analysis. This approach ensured that the building permits data was efficiently stored, well-organized, and maintained to high security standards, supporting seamless analytical workflows.
 
-### PLACEHOLDER FOR "Data Organizing in Landing Zone of S3 Bucket in AWS in Excel Format"
 
 ---
 
-## Step 4: Data Preparation
+## Data Preparation
 
 Data transformation was undertaken, including the addition of a new column representing the year, which facilitated comparisons between the 2023 and 2024 datasets. The cleaned and transformed datasets were then securely stored in their respective S3 bucket folders, organized under the "Raw" section for each year. This preparation phase ensured that the building permits data was clean, well-organized, and primed for in-depth analysis, laying a solid foundation for the subsequent stages of the project.
 
@@ -47,7 +65,7 @@ Data transformation was undertaken, including the addition of a new column repre
 
 ---
 
-## Step 5: Designing a Data Pipeline for Building Permits
+## Designing a Data Pipeline for Building Permits
 
 A data pipeline was designed to efficiently process and load the issued building permits data. The plan mapped the data flow from the Landing S3 bucket to the Curated S3 bucket, detailing the transformation steps, including adding a year column for comparisons and aggregating the data for analysis. AWS Glue was selected for the ETL process, ensuring smooth data transformation and loading. A visual workflow in AWS Glue outlined each stage of the pipeline, establishing a streamlined process ready for implementation.
 
@@ -55,7 +73,7 @@ A data pipeline was designed to efficiently process and load the issued building
 
 ---
 
-## Step 6: Implementing the Data Pipeline using AWS Glue
+## Implementing the Data Pipeline using AWS Glue
 
 - **Data Sources (AWS S3)**: Datasets for 2023 (`BuildingPermit2023`) and 2024 (`BuildingPermit2024`) are sourced from S3 buckets.
 - **Standardization**: Columns such as `TypeOfWork`, `Year`, and `Count of Each Work` are standardized for both datasets.
@@ -70,7 +88,7 @@ A data pipeline was designed to efficiently process and load the issued building
 
 ---
 
-## Step 7: Data Preparation and Query Execution
+## Data Preparation and Query Execution
 
 The process commenced with the creation of external tables in Amazon Athena, which were linked to the curated S3 data on building permits. Using SQL, queries were executed to extract pertinent information from the datasets. This was followed by a thorough data analysis phase:
 
@@ -86,7 +104,7 @@ This step effectively provided valuable insights using the querying power of Ath
 
 ---
 
-## Step 8: Data Visualization
+## Data Visualization
 
 ### Tool Selection and Chart Generation
 
@@ -100,7 +118,7 @@ The generated charts were consolidated into an interactive Excel dashboard, allo
 
 ---
 
-## Step 9: Data Publishing
+## Data Publishing
 
 ### Server Setup and Cost Efficiency
 
@@ -156,4 +174,52 @@ AWS CloudTrail was set up to monitor all the bucket activity and the Glue activi
 
 ![image](https://github.com/user-attachments/assets/3b27615c-d012-4b94-8f58-8ef0cce24b30)
 
+## Tools Used
+
+- **Amazon S3**:  
+  Used to store and manage the 2023 and 2024 building permit datasets in a scalable and secure manner. S3 provided reliable storage for raw and processed data.
+  
+- **AWS Glue**:  
+  Implemented as the ETL (Extract, Transform, Load) tool for cleaning, transforming, and preparing the building permit data for analysis. AWS Glue workflows automated the data pipeline.
+
+- **Amazon Athena**:  
+  Utilized for querying the structured datasets stored in S3 using SQL. It enabled fast, serverless queries and provided a scalable solution for extracting meaningful insights.
+
+- **Amazon CloudTrail**:  
+  Set up to monitor and log activity in S3 and AWS Glue, ensuring security and compliance by tracking changes and access.
+
+- **Amazon CloudWatch**:  
+  Implemented to monitor the performance and costs of the AWS resources. CloudWatch alarms were set up to notify stakeholders of any cost overruns.
+
+- **Excel**:  
+  Selected for visualizing the results due to its robust charting capabilities. Data visualizations such as line charts, pie charts, and bar charts were created to illustrate the findings.
+
+- **AWS KMS (Key Management Service)**:  
+  Used to encrypt sensitive data stored in S3 buckets, ensuring data security at rest.
+
+- **Linux Server**:  
+  Used for hosting the processed results and visualizations, enabling easy access and reporting via a web interface.
+
+## Outcomes
+
+- **Year-over-Year Trends**:  
+  A significant increase in building permit issuance was observed from 2023 to 2024, indicating robust construction activity across Vancouver. The analysis highlighted neighborhoods with the highest concentration of new projects.
+
+- **Inactive Permits in 2024**:  
+  A noticeable trend of inactive permits from 2023 suggests delays or project halts, with data insights providing a roadmap for optimizing urban development planning.
+
+- **Streamlined Data Workflow**:  
+  The data pipeline using AWS Glue successfully processed and merged datasets from 2023 and 2024. Standardized schemas ensured seamless analysis, and the automation reduced manual intervention.
+
+- **Interactive Data Visualizations**:  
+  Interactive Excel dashboards allowed stakeholders to dynamically explore building permit data, contributing to more informed decision-making for urban planning.
+
+- **Cost Management**:  
+  With AWS CloudWatch alarms in place, any unexpected cost spikes were promptly flagged, helping maintain budget control while scaling data processing tasks.
+
+- **Data Security**:  
+  The encryption of datasets using AWS KMS, along with backup and replication strategies, ensured data was both secure and highly available, meeting stringent compliance standards.
+
 ```
+
+
