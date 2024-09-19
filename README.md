@@ -1,10 +1,10 @@
-# Data Analytics Portfolio
+# Cloud Computing Portfolio
 
 This repository contains two key projects focused on data analysis and ETL processes using AWS services. Both projects demonstrate various stages of data extraction, transformation, and loading (ETL), data governance, and the use of visualization tools. The first project deals with the building permits data of the City of Vancouver, while the second project involves analyzing conflict resolution data within the HR department.
 
 ---
 
-## Project 1: Data Analysis for Issued Building Permits in DAP (City of Vancouver)
+## Project 1: DAP for Issued Building Permits in DAP (City of Vancouver)
 
 ### Description
 
