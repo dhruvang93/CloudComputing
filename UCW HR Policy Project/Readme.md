@@ -4,7 +4,7 @@
 
 The objective of this project is to analyze and manage conflict resolution data within the HR department. The main goal is to find approved and solved conflicts, providing insights that can help improve HR policies and procedures related to conflict resolution.
 
-![Project Diagram](https://github.com/user-attachments/assets/e418948a-6b8c-47e6-9ae6-9d9b6a731055)
+![Cloud Solution 2 - Dhruvang Joshi - 2304657(1)](https://github.com/user-attachments/assets/7ddcdf80-3f42-46ac-9bc1-72aacf717eb7)
 
 ## Dataset
 
@@ -18,7 +18,6 @@ The objective of this project is to analyze and manage conflict resolution data 
 - **Approval Status:** Approval of conflict resolution procedures by HR managers.
 - **Resolution Dates:** Dates when conflicts were resolved.
 
-![Data Collection](https://github.com/user-attachments/assets/0beb74e8-744a-4103-88d0-950283f16fbd)
 
 ## Methodology
 
@@ -42,7 +41,7 @@ The objective of this project is to analyze and manage conflict resolution data 
 - Added a "Year" column to facilitate annual analysis.
 - Cleaned data was stored in the Raw S3 bucket.
 
-![Data Cleaning](https://github.com/user-attachments/assets/eae7689c-1816-478b-a2dc-194c0f83cad3)
+![AWS Console 3](https://github.com/user-attachments/assets/914a5563-3d06-4efc-94d5-a2861f82fa52)
 
 ### 3. ETL Pipeline Design
 
@@ -51,14 +50,16 @@ The objective of this project is to analyze and manage conflict resolution data 
 - Designed an ETL pipeline using Draw.io to map data flow from the Landing S3 bucket to the Curated S3 bucket.
 - Key transformations included renaming columns for consistency, filtering out irrelevant data, and aggregating conflict resolution data.
 
-![ETL Pipeline](https://github.com/user-attachments/assets/103cb2e6-3082-4950-aad6-40f312c2df10)
+![conflict draw 1](https://github.com/user-attachments/assets/97e76318-2efa-4ec3-be2c-362ee7796366)
+![conflict draw 2](https://github.com/user-attachments/assets/0fa86406-2087-4103-aeed-2bf4d9f3d3be)
+![Conflicts 3](https://github.com/user-attachments/assets/b1b56be4-2c88-4a60-becd-c2a2429ff800)
 
 **ETL Implementation Using AWS Glue:**
 
 - Implemented the ETL pipeline in AWS Glue to extract, transform, and load data.
 - Automated processes ensured data was up-to-date and accurate.
 
-![AWS Glue ETL](https://github.com/user-attachments/assets/317d8350-5361-4169-bd4c-2d9f33e753f0)
+![Pipeline](https://github.com/user-attachments/assets/4f168401-425f-49f9-a82d-dd165d7c3f4e)
 
 ### 4. Data Analysis
 
@@ -67,7 +68,7 @@ The objective of this project is to analyze and manage conflict resolution data 
 - Created external tables in Amazon Athena linked to the curated S3 data.
 - Used SQL queries to organize and retrieve data for analysis.
 
-![Amazon Athena](https://github.com/user-attachments/assets/51e20f50-b23f-4af9-bb3e-7a420afbaeaf)
+![AWS Console 4](https://github.com/user-attachments/assets/07aa4f31-88dc-4976-b6f7-e260ec7f36cf)
 
 **Data Analysis:**
 
@@ -84,20 +85,20 @@ The objective of this project is to analyze and manage conflict resolution data 
 
 - Created a backup S3 bucket for data redundancy.
 - Applied replication rules to securely transfer data between primary and backup buckets with encryption.
+![image](https://github.com/user-attachments/assets/9a26261d-d1de-42b7-800a-2c80f85c4755)
 
 **Automated Data Governance:**
 
 - Employed AWS Glue for regular data quality checks.
 - Scheduled automation processes to maintain data integrity.
 
-![Data Governance](https://github.com/user-attachments/assets/0dcd5244-ca8d-45f1-8f55-ee561bbcb3f1)
+![image](https://github.com/user-attachments/assets/3fc15c3b-1a0d-4cc4-ae86-97f565bad225)
 
 ### 6. Data Monitoring
 
 - **Amazon CloudWatch:** Monitored resource usage and cost estimations.
 - **AWS CloudTrail:** Tracked user activities and API calls, storing logs in S3 for auditing.
 
-![Data Monitoring](https://github.com/user-attachments/assets/651e7053-9b4d-448e-936c-3d7645c8e6ac)
 
 ### 7. Data Visualization
 
@@ -106,7 +107,6 @@ The objective of this project is to analyze and manage conflict resolution data 
 - Created interactive charts and graphs using Excel.
 - Developed dashboards to present insights on conflict resolution trends and statistics.
 
-![Data Visualization](https://github.com/user-attachments/assets/cd5c3b26-f349-4cfe-b7ff-4ac79ed6a616)
 
 ### 8. Data Publishing
 
@@ -115,7 +115,6 @@ The objective of this project is to analyze and manage conflict resolution data 
 - Configured AWS EC2 instances to host and publish processed data and visualizations.
 - Provided stakeholders with web access to reports and dashboards.
 
-![EC2 Instances](https://github.com/user-attachments/assets/9d2b5fab-9866-40d8-9d46-36a71be9a904)
 
 **Data Storage:**
 
