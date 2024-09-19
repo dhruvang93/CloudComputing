@@ -26,7 +26,7 @@ To guide this analysis, we formulated specific questions related to the 2023 and
 - **Year-over-Year Trends**: How are the issuance and approval rates of building permits changing from 2023 to 2024?
 - **Permit Activity Analysis**: What is the trend for building permits that were approved in 2023 but became inactive in 2024?
 
-### PLACEHOLDER FOR "Analyzing Structured Data"
+![image](https://github.com/user-attachments/assets/9fe01575-f783-4d1c-9cd1-f9c70768d6b9)
 
 ---
 
@@ -36,7 +36,7 @@ In the analysis of issued building permits within the City of Vancouver, dataset
 
 Additionally, the datasets were scrutinized for any missing or incomplete data, particularly in critical fields like `PermitNumberCreatedDate`, `IssueDate`, and `ApplicantAddress`. This step ensured that any data gaps were identified and managed effectively to maintain the integrity of the analysis. Early insights were gathered during this discovery phase, offering preliminary observations on trends in permit issuance by year, common project types, and the geographic concentration of permits. These insights laid the groundwork for a more detailed and effective analysis in the subsequent stages of the project.
 
-### PLACEHOLDER FOR "Data Source and Collecting from City of Vancouver Dashboard"
+![image](https://github.com/user-attachments/assets/7ac50450-920e-4e78-b632-7a9cf856dc53)
 
 ---
 
@@ -54,9 +54,8 @@ In addition to storage and organization, stringent security measures were implem
 
 Data transformation was undertaken, including the addition of a new column representing the year, which facilitated comparisons between the 2023 and 2024 datasets. The cleaned and transformed datasets were then securely stored in their respective S3 bucket folders, organized under the "Raw" section for each year. This preparation phase ensured that the building permits data was clean, well-organized, and primed for in-depth analysis, laying a solid foundation for the subsequent stages of the project.
 
-### PLACEHOLDER FOR "Data Handling in AWS Glue for 2023 and 2024 Dataset"
 
-### PLACEHOLDER FOR "Cleaned Data (2023, 2024) Stored in Raw Data Folder in Their Respective Locations in CSV"
+![image](https://github.com/user-attachments/assets/07a1a83e-33f7-414e-bb3b-db408a492471)
 
 ---
 
@@ -64,7 +63,7 @@ Data transformation was undertaken, including the addition of a new column repre
 
 A data pipeline was designed to efficiently process and load the issued building permits data. The plan mapped the data flow from the Landing S3 bucket to the Curated S3 bucket, detailing the transformation steps, including adding a year column for comparisons and aggregating the data for analysis. AWS Glue was selected for the ETL process, ensuring smooth data transformation and loading. A visual workflow in AWS Glue outlined each stage of the pipeline, establishing a streamlined process ready for implementation.
 
-### PLACEHOLDER FOR "Implementing Designed ETL Pipeline in AWS Glue"
+![image](https://github.com/user-attachments/assets/9c949f6e-f0ea-4500-8be1-59d80efbd483)
 
 ---
 
@@ -79,7 +78,7 @@ A data pipeline was designed to efficiently process and load the issued building
 - **Aggregation**: Data is aggregated by `TypeOfWork` and `Count of Work`, calculating the total number of permits issued.
 - **Output**: The final aggregated dataset is output to an S3 bucket, organized by `TypeOfWork` and `Count of Work` for easy access and analysis.
 
-### PLACEHOLDER FOR "Storing Implemented Data in Curated Zone of S3 Bucket in CSV Form"
+![image](https://github.com/user-attachments/assets/8b50ce35-c877-43a4-b5da-a62513a3dece)
 
 ---
 
@@ -95,7 +94,7 @@ The process commenced with the creation of external tables in Amazon Athena, whi
 
 This step effectively provided valuable insights using the querying power of Athena.
 
-### PLACEHOLDER FOR "Data Table Preparation Using SQL Query in AWS Athena"
+![image](https://github.com/user-attachments/assets/a3906c15-0139-4a1c-9a7e-3db62e43ca01)
 
 ---
 
@@ -109,7 +108,7 @@ Given budget constraints, Excel was chosen for data visualization due to its rob
 
 The generated charts were consolidated into an interactive Excel dashboard, allowing stakeholders to explore the data dynamically. This dashboard was then compiled into a PDF report, providing a structured and actionable presentation of the analysis results. This approach ensured that the findings were accessible and easily interpretable for decision-makers.
 
-### PLACEHOLDER FOR "Preparing Data Charts in Excel Dashboard"
+![image](https://github.com/user-attachments/assets/48ddb26a-0474-4ec0-8bb2-66820a197bf6)
 
 ---
 
@@ -123,9 +122,8 @@ To manage costs effectively, a Linux server was utilized for setting up server i
 
 The published report was made accessible through a browser interface. Additionally, prescriptive analytics were provided to offer recommendations based on the analysis, aiding in informed decision-making. This setup ensured secure storage, efficient publishing, and easy accessibility of the findings.
 
-### PLACEHOLDER FOR "Creating EC2 Instances in AWS Cloud"
+![image](https://github.com/user-attachments/assets/7f3e0341-e352-4da5-ae79-6c6ab5e8898b)
 
-### PLACEHOLDER FOR "Linux Terminal & Website"
 
 ---
 
@@ -137,11 +135,10 @@ The published report was made accessible through a browser interface. Additional
 - **Backup S3 Bucket**: Created a backup S3 bucket containing a duplicate of the building permit data for high availability and disaster recovery.
 - **Replication Rules**: Set up replication rules to securely transfer data from the primary S3 bucket to the backup bucket, using the same KMS key for encryption during the transfer.
 
-### PLACEHOLDER FOR "KMS Generated Key for Lab Role Which Will Be Used to Protect S3"
+![image](https://github.com/user-attachments/assets/a9c8f486-c65c-4334-8874-cf2b0bb74bc0)
 
-### PLACEHOLDER FOR "Backup Replication Rules"
+![image](https://github.com/user-attachments/assets/509274ab-2dc3-4198-90f8-feefc35dad5f)
 
-### PLACEHOLDER FOR "Bucket Encryption Rules"
 
 ---
 
@@ -149,15 +146,14 @@ The published report was made accessible through a browser interface. Additional
 
 A workflow for building permits was developed to enable the data governance process. This process ensures that the output data follows the rules and passes all the quality checks. The ETL pipeline was developed in AWS Glue.
 
-### PLACEHOLDER FOR "ETL Pipeline"
+![image](https://github.com/user-attachments/assets/58c32cfb-80c8-4ca9-abde-2fc03ac63718)
 
 Data was checked and cleaned on a daily schedule since new permits are applied daily.
 
-### PLACEHOLDER FOR "Schedule of Pipeline"
+![image](https://github.com/user-attachments/assets/419e3f9b-9c0a-4770-a09d-b3fbffc1bc71)
 
-### PLACEHOLDER FOR "Data Workflow of the Pipeline"
 
-### PLACEHOLDER FOR "Data Quality Monitor Metric"
+![image](https://github.com/user-attachments/assets/6da9666b-24ce-4d95-baf4-0ba19374498f)
 
 ---
 
@@ -165,15 +161,11 @@ Data was checked and cleaned on a daily schedule since new permits are applied d
 
 For this part, a dashboard was developed to monitor the objects in S3 buckets and ensure that costs are managed by the billing metric in the dashboard. An alarm was set up to monitor the estimated charges, which will be triggered if billing above $35 occurs in the last 6 hours.
 
-### PLACEHOLDER FOR "Dashboard"
+![image](https://github.com/user-attachments/assets/3e388aca-251c-4375-a7e2-f457ac2f6695)
 
-### PLACEHOLDER FOR "S3 Monitoring Dashboard – Automated Solution"
-
-### PLACEHOLDER FOR "Billing Alarm – Rules and Status"
 
 AWS CloudTrail was set up to monitor all the bucket activity and the Glue activity logs.
 
-### PLACEHOLDER FOR "CloudTrail Configuration and Logging Status"
+![image](https://github.com/user-attachments/assets/3b27615c-d012-4b94-8f58-8ef0cce24b30)
 
-### PLACEHOLDER FOR "S3 Bucket with Logs"
 ```
