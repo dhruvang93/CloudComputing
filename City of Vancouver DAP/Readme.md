@@ -6,19 +6,7 @@ This project leverages AWS and advanced data analytics tools to analyze and visu
 
 ## Table of Contents
 
-- [Step 1: Formulate Focused Data Analytical Questions](#step-1-formulate-focused-data-analytical-questions)
-- [Step 2: Data Discovery for Issued Building Permits](#step-2-data-discovery-for-issued-building-permits)
-- [Step 3: AWS-Based Storage Solution for Issued Building Permits Data](#step-3-aws-based-storage-solution-for-issued-building-permits-data)
-- [Step 4: Data Preparation](#step-4-data-preparation)
-- [Step 5: Designing a Data Pipeline for Building Permits](#step-5-designing-a-data-pipeline-for-building-permits)
-- [Step 6: Implementing the Data Pipeline using AWS Glue](#step-6-implementing-the-data-pipeline-using-aws-glue)
-- [Step 7: Data Preparation and Query Execution](#step-7-data-preparation-and-query-execution)
-- [Step 8: Data Visualization](#step-8-data-visualization)
-- [Step 9: Data Publishing](#step-9-data-publishing)
-- [Data Protection](#data-protection)
-- [Data Governance](#data-governance)
-- [Data Monitoring](#data-monitoring)
-
+-
 ## Step 1: Formulate Focused Data Analytical Questions
 
 To guide this analysis, we formulated specific questions related to the 2023 and 2024 building permit datasets:
